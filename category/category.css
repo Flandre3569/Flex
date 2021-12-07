@@ -1,0 +1,103 @@
+.container {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+/* 头部 */
+.header {
+	/* 头部和尾部的比例应该与屏幕宽度相关，所以是vw */
+	height: 12vw;
+	flex-shrink: 0;
+}
+/* 中间 */
+.content {
+	flex-grow: 1;
+	display: flex;
+	align-items: stretch;
+	flex-direction: row;
+	border-top:1px solid #b0b0b0 ;
+	border-bottom: 1px solid #b0b0b0;
+	overflow: hidden;
+}
+/* 中间-左边 */
+.left {
+	width: 22vw;
+	flex-shrink: 0;
+	overflow: auto;
+}
+/* 找到页面中的滚动条 */
+.left::-webkit-scrollbar {
+	width: 0;
+}
+ul.list-main {
+	
+}
+ul.list-main li {
+	height: 12vw;
+	display: flex;
+	align-items: center;
+}
+ul.list-main span {
+	height: 6.7vw;
+	line-height: 6.7vw;
+	flex-grow: 1;
+	text-align: center;
+	font-size: 3.7vw;
+	border-left: 4px solid transparent;
+}
+ul.list-main li.active span {
+	color: red;
+	border-left: 4px solid red;
+}
+/* 中间-右边 */
+.right {
+	flex-grow: 1;
+	border-left: 1px solid black;
+	padding: 4vw;
+}
+img.avatar { 
+	border-radius: 8px; 
+	width: 100%;
+}
+ul.list-sub {
+	display: flex;
+	flex-wrap: wrap;
+}
+ul.list-sub li {
+	width: 33.333333%;
+	height: 28vw;
+	display: flex;
+}
+ul.list-sub a {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+ul.list-sub .img-wrapper {
+	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+ul.list-sub img {
+	width: 70%;
+}
+ul.list-sub span {
+	height: 5vw;
+	line-height: 5vw;
+	flex-shrink: 0;
+	font-size: 3vw;
+}
+
+/* 页脚 */
+.footer { 
+	height: 14vw;
+	flex-shrink: 0;
+}
+iframe {
+	width: 100%;
+	height: 100%;
+}
+

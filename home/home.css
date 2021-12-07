@@ -1,0 +1,227 @@
+body {
+	background-color: #D3D3D3;
+}
+.header {
+	/* height: 50px;检查完毕后可以删除此行 */
+		background-color: #eee;
+	/* 
+		元素定位后带来副作用
+		
+		1.定位后具有包裹性
+		2.元素固定定位后，脱离普通文档流，
+		又可能盖住其他的普通文档流
+	 */
+	position: fixed;
+	/* 
+		父亲没有定位，而儿子需要决定定位时可以给父亲加入下面的position
+		position: relative;
+	 */
+	/* 上下左右只有设置定位后才会生效 */
+	top: 0;
+	/* bottom: 0; */
+	left: 0;
+	/* right: 0; */
+	width: 100%;
+	z-index: 10;
+}
+.header>h1 {
+	text-align: center;
+	font-size: 24px;
+	font-weight: normal;
+	/* 单行文本的垂直居中 */
+	height: 50px;
+	line-height: 50px;
+}
+.header>img {
+	/* 绝对定位 */
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+img.menu {left: 10px;}
+img.search {right: 10px;}
+
+.content {
+	padding-top: 50px;
+	overflow: hidden;
+}
+.part {background-color: white;}
+
+.banner {
+	height: 200px;
+	border-radius: 7px;
+}
+.swiper-wrapper>.banner1 {
+	background: url(images/banner2.png);
+	background-size: 100% 100%;
+	
+}
+.swiper-wrapper>.banner2 {
+	background: url(images/banner3.jpg);
+	background-size: 100% 100%;
+}
+.swiper-wrapper>.banner3 {
+	background: url(images/banner4.png);
+	background-size: 100% 100%;
+}
+/* 总索引部分 */
+.decribe {
+	position: relative;
+}
+.decribe>.dec_span {
+	text-align: center;
+	position: absolute;
+	top: 65%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.dec_span>.span1 {
+	width: 40%;
+	font-size: 20px;
+}
+.dec_span>.span2 {
+	font-size: 30px;
+}
+.dec_list {
+	display: flex;
+	height: 14vh;
+	justify-content: space-evenly;
+	align-items: flex-end;
+}
+.dec_list>li {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.dec_list img {
+	width: 5vh;
+	margin: 0 auto;
+	padding: 1vh;
+	
+}
+
+.decribe>img {
+	width: 100%;
+	
+}
+
+.title { text-align: center; padding: 10px 0; border-top: 1vh solid #B0B0B0; }
+.title>h2 { font-size: 20px; font-weight: normal; }
+.title>p { font-size: 13px; }
+.part>ul { font-size: 0; margin-right: -2px; }
+.part>ul>li { 
+	box-sizing: border-box;
+	display: inline-block; width: 50%; font-size: 16px;
+	border-top: 1px solid #B0B0B0;
+	border-right: 1px solid #B0B0B0;
+	padding: 10px;
+ }
+/* 使用空格选择器选择后代 */
+.part>.shop_list1 a,.part>.news_list a { display: block; height: 125px; position: relative; }
+.part>.shop_list1 h3,.part>.news_list h3 { font-size: 12px; color: #666; font-size: normal; }
+.part>.shop_list1 span,.part>.news_list span { font-size: 12px; color: red; }
+.part>.shop_list1 img,.part>.news_list img { width: 100px; position: absolute; right: 0; bottom: 0; }
+.part>.shop_list1 h5,.part>.news_list h5 {
+	font-size: 1px;
+}
+/* 新品好物 */
+
+.part>.news_list li {
+	height: 21vh;
+}
+.part>.news_list .li_3 {
+	padding-top: 0 !important;
+}
+/* .part>.news_list .li_4 {
+	
+} */
+
+/* 精品热卖 */
+.hot_list {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+.hot_list li {
+	width: 33% !important; 
+	position: relative;
+	align-items:flex-end;
+}
+.hot_list>li img {
+	width: 15vh;
+}
+.hot_list>li .span_price {
+	color: red;
+}
+.hot_list>li .span_remark {
+	font-size: 10px;
+}
+
+/* 横向滑动 */
+.good_list {
+	overflow-x: auto;
+	overflow-y: hidden;
+	height:43vh;
+	white-space: nowrap;
+	display: flex;
+}
+.good_list img {
+	height: 25vh;
+	border-radius: 5px;
+}
+.good_list li {
+	width: 100% !important; 
+}
+.good_list .span_price {
+	color: red;
+}
+
+/* 好物推荐 */
+.recommend_list {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+/* 调整防止被覆盖 */
+.recommend_list {
+	box-sizing: border-box;
+	padding-bottom: 8vh;
+}
+.recommend_list img {
+	height: 20vh;
+}
+.recommend_list .span_price {
+	color: red;
+}
+
+/* 页脚 */
+.footer {
+	height: 14vw;
+	flex-shrink: 0;
+	background-color: white;
+	border-top: 1px solid black;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+iframe {
+	width: 100%;
+	height: 100%;
+}
+
+/* 返回顶部按钮 */
+.button {
+    position: fixed;
+    bottom: 50px;
+    right: 0;
+    height: 50px;
+    width: 50px;
+    background:url(images/至顶.png);
+	background-size: cover;
+    display: none;
+        }
+.button a {
+    text-decoration: none;
+}
+
+/* 根据页面分析表现,决定html的结构 */

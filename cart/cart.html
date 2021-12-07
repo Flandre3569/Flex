@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../assets/recite.css">
+		<link rel="stylesheet" href="../assets/layer/mobile/need/layer.css">
+		<link rel="stylesheet" href="cart.css">
+		<script>window.name = 3;</script>
+		<title>购物车</title>
+	</head>
+	<body>
+		
+		<div class="container">
+			<div class="header">
+				<h1>购物车</h1>
+				<button class="btn-begin-edit show">编辑</button>
+				<button class="btn-end-edit">完成</button>
+			</div>
+			<div class="content">
+				<div class="list-wrapper">
+					<ul class="list"></ul>
+				</div>
+				<div class="footer-normal show">
+					<div class="checkbox-wrapper">
+						<i class="checkbox all normal checked"></i> 全选
+					</div>
+					<div class="total-wrapper">
+						合计：￥<span class="total"></span>.00
+					</div>
+					<button class="btn-buy" type="button">下单</button>
+				</div>
+				<div class="footer-edit">
+					<div>
+						<i class="checkbox all edit"></i> 全选
+					</div class="checkbox-wrapper">
+					<button class="btn-remove" type="button">删除</button>
+				</div>
+			</div>
+			<div class="footer">
+				<iframe src="../nav/nav.html" frameborder="0"></iframe>
+			</div>
+		</div>
+		
+		<script src="../assets/jQuery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../data.js" type="text/javascript" charset="utf-8"></script>
+		<script src="cart.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

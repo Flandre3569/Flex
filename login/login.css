@@ -1,0 +1,32 @@
+.container {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	padding: 10vw;
+}
+form {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+.form-item {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 2vw;
+}
+input,button {
+	border: none;
+	outline: none;		/* 轮廓 */
+	background-color: transparent;
+}
+input {
+	border: 1px solid #B0B0B0;
+	height: 11vw;
+	text-indent: 1em;		/* 文本缩进 */
+}
+button {
+	height: 14vw;
+	background-color: #c55a5c;
+	color: white;
+	border-radius: 6px;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../assets/recite.css">
+		<link rel="stylesheet" href="./category.css">
+		<!-- 父子窗口传值使用属性name,跨页面进行传递值 -->
+		<script>window.name = 2;</script>
+		<title>分类</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="header"></div>
+			<div class="content">
+				<div class="left">
+					<ul class="list-main"></ul>
+				</div>
+				<div class="right">
+					<img class="avatar" src="" alt="" />
+					<ul class="list-sub"></ul>
+				</div>
+			</div>
+			<div class="footer">
+				<iframe src="../nav/nav.html" frameborder="0"></iframe>
+			</div>
+		</div>
+		
+		<script src="../data.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/jQuery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./category.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

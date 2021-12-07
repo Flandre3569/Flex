@@ -1,0 +1,162 @@
+button {
+	border: none;
+	outline: none;
+	background-color: transparent;
+}
+/* 复选框样式 */
+.checkbox-wrapper {
+	font-size: 16px;
+}
+i {}
+i.checkbox {
+	flex-shrink: 0;
+	display: inline-block;
+	vertical-align: middle;
+	width: 4.8vw;
+	height: 4.8vw;	
+	border-radius: 50%;
+	background-size: 100% 100%;
+	background-image: url(images/icon_checkbox_uncheck.png);
+}
+i.checkbox.checked {
+	background-image: url(images/icon_checkbox_check.png);
+}
+ul.list i.checkbox{ display: none; }
+ul.list i.checkbox.show{ display: block; }
+
+
+.container {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+/* 页头 */
+.header {
+	height: 12vw;
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #eee;
+	position: relative;
+}
+.header h1 {
+	font-size: 20px;
+	font-weight: normal;
+}
+button.btn-begin-edit, button.btn-end-edit {
+	display: none;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding:0 30px;
+}
+button.btn-begin-edit.show {
+	display: block;
+}
+button.btn-end-edit.show {
+	display: block;
+}
+/* 页中 */
+.content {
+	flex-grow: 1;
+	border-top: 1px solid #b0b0b0;
+	border-bottom: 1px solid #b0b0b0;
+	display: flex;
+	flex-direction: column;
+}
+.list-wrapper {
+	flex-grow: 1;
+}
+ul.list {}
+ul.list li {
+	display: flex;
+	flex-shrink: 0;
+	align-items: center;
+	padding: 5px 10px;
+	margin: 20px 0;
+}
+ul.list img {
+	width: 22vw;
+	flex-shrink: 0;
+	margin: 0 10px;
+	background-color: #eee;
+	border-radius: 8px;
+}
+ul.list .detail {
+	flex-grow: 1;
+	font-size: 16px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+ul.list h3 {
+	font-weight: normal;
+	font-size: 16px;
+}
+.count-wrapper {
+	display: flex;
+	width: 120px;
+	height: 28px;
+	border: 1px solid #B0B0B0;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.count-wrapper>* {
+	flex-grow: 1;
+}
+span.count {
+	border-left: 1px solid #B0B0B0;
+	border-right: 1px solid #B0B0B0;
+	text-align: center;
+	font-size: 14px;
+	line-height: 28px;
+}
+button.btn-decrease,button.btn-increase {
+	font-size: 22px;
+}
+.price-wrapper {
+	color: #C55A5C;
+	font-weight: bold;
+}
+.footer-normal, .footer-edit {
+	height: 14vw;
+	flex-shrink: 0;
+	border-top: 1px solid black;
+	display: none; /* 默认都不显示 */
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 10px;
+}
+/* 有show的显示 */
+.footer-normal.show {
+	display: flex;
+}
+.footer-edit.show {
+	display: flex;
+}
+.btn-buy, .btn-remove {
+	align-self: stretch;
+	width: 30vw;
+	background-color: #C55A5C;
+	color: white;
+	font-size: 16px;
+}
+.btn-buy {
+	
+}
+.btn-remove {
+	
+}
+/* 页脚 */
+.footer {
+	height: 14vw;
+	flex-shrink: 0;
+}
+iframe {
+	width: 100%;
+	height: 100%;
+}
